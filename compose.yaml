@@ -1,0 +1,7 @@
+﻿services:
+  tests:
+    image: tests
+    build:
+      context: .
+      dockerfile: Tests/Dockerfile
+
