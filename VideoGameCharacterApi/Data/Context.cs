@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using VideoGameCharacterApi.Data.Configurations;
 using VideoGameCharacterApi.DomainModel;
 using VideoGameCharacterApi.Models;
 
@@ -14,11 +13,6 @@ public class Context(DbContextOptions<Context> options) : DbContext(options)
                 email.Property(c => c.Value).HasColumnName("Email").IsRequired();
             })
         );
-
-
-        // .Property(x => x.Email).HasConversion(  
-        //     x => x.Value, 
-        //     value => Email.Create(value));
     }
 
     

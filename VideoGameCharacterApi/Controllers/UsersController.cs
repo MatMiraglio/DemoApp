@@ -1,10 +1,8 @@
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using VideoGameCharacterApi.Controllers.Attributes;
 using VideoGameCharacterApi.Data;
 using VideoGameCharacterApi.DomainModel;
-using VideoGameCharacterApi.Models;
 
 namespace VideoGameCharacterApi.Controllers;
 
