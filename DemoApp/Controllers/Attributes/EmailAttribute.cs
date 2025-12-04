@@ -1,9 +1,9 @@
 using System.ComponentModel.DataAnnotations;
-using VideoGameCharacterApi.DomainModel;
-using VideoGameCharacterApi.Models;
-using VideoGameCharacterApi.Services;
+using DemoApp.DomainModel;
+using DemoApp.Models;
+using DemoApp.Services;
 
-namespace VideoGameCharacterApi.Controllers.Attributes;
+namespace DemoApp.Controllers.Attributes;
 
 [AttributeUsage(AttributeTargets.Property)]
 public sealed class EmailValidationAttribute : ValidationAttribute
@@ -24,7 +24,7 @@ public sealed class EmailValidationAttribute : ValidationAttribute
 
         var emailIsTaken = userService.EmailExists(email);
         
-        if (emailIsTaken) return new ValidationResult(Errors.EmailIsTaken.Serialize());
+        if (emailIsTaken) return new ValidationResult(Errors.EmailIsTaken.Message);
         
         return ValidationResult.Success;
     }

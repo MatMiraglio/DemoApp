@@ -1,10 +1,11 @@
 using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
+using DemoApp.Controllers.Attributes;
+using DemoApp.Data;
+using DemoApp.DomainModel;
 using Microsoft.AspNetCore.Mvc;
-using VideoGameCharacterApi.Controllers.Attributes;
-using VideoGameCharacterApi.Data;
-using VideoGameCharacterApi.DomainModel;
 
-namespace VideoGameCharacterApi.Controllers;
+namespace DemoApp.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -47,4 +48,8 @@ public class RegisterUserRequest
     [Required]
     [EmailValidation]
     public string Email { get; set; }
+    
+    [Required]
+    [MinLength(4, ErrorMessage = "Name must have at least 4 characters")]
+    public string Name { get; set; }
 }

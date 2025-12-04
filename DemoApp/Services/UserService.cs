@@ -1,6 +1,6 @@
-using VideoGameCharacterApi.Data;
+using DemoApp.Data;
 
-namespace VideoGameCharacterApi.Services;
+namespace DemoApp.Services;
 
 public class UserService
 {

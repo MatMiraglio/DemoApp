@@ -1,7 +1,8 @@
+using DemoApp.DomainModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 
-namespace VideoGameCharacterApi.Services;
+namespace DemoApp.Services;
 
 public class ModelStateValidator
 {
@@ -9,30 +10,26 @@ public class ModelStateValidator
     {
         (string fieldName, ModelStateEntry entry) = context.ModelState
             .First(x => x.Value.Errors.Count > 0);
-        string errorSerialized = entry.Errors.First().ErrorMessage;
-
-        Error error = Error.Deserialize(errorSerialized);
-        Envelope envelope = Envelope.Error(error, fieldName);
-        var result = new BadRequestObjectResult(envelope);
+        string errorMessage = entry.Errors.First().ErrorMessage;
+        
+        ErrorEnvelope errorEnvelope = ErrorEnvelope.Error(errorMessage, fieldName);
+        var result = new BadRequestObjectResult(errorEnvelope);
 
         return result;
     }
 }
 
-public class Envelope
+public class ErrorEnvelope
 {
-    public object Result { get; set; }
-    public string ErrorCode { get; set; }
     public string ErrorMessage { get; set; }
-    public string InvalidField { get; set; }
+    public string Field { get; set; }
 
-    public static Envelope Error(Error error, string fieldName)
+    public static ErrorEnvelope Error(string error, string fieldName)
     {
-        return new Envelope
+        return new ErrorEnvelope
         {
-            ErrorCode =  error.Code,
-            ErrorMessage = error.Message,
-            InvalidField = fieldName
+            ErrorMessage = error,
+            Field = fieldName
         };
     }
 }

@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace VideoGameCharacterApi.Migrations
+namespace DemoApp.Migrations
 {
     /// <inheritdoc />
     public partial class Initial : Migration

@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using VideoGameCharacterApi.DomainModel;
-using VideoGameCharacterApi.Models;
+using DemoApp.DomainModel;
+using DemoApp.Models;
 
-namespace VideoGameCharacterApi.Data.Configurations;
+namespace DemoApp.Data.Configurations;
 
 

@@ -1,8 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
-using VideoGameCharacterApi.DomainModel;
-using VideoGameCharacterApi.Models;
+﻿using DemoApp.DomainModel;
+using DemoApp.Models;
+using Microsoft.EntityFrameworkCore;
 
-namespace VideoGameCharacterApi.Data;
+namespace DemoApp.Data;
 
 public class Context(DbContextOptions<Context> options) : DbContext(options)
 {

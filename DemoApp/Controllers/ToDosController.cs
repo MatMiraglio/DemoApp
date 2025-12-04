@@ -1,8 +1,8 @@
+using DemoApp.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using VideoGameCharacterApi.Data;
 
-namespace VideoGameCharacterApi.Controllers;
+namespace DemoApp.Controllers;
 
 [ApiController]
 [Route("[controller]")]

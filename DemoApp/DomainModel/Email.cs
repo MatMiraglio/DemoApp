@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
-using VideoGameCharacterApi.Models;
+using DemoApp.Models;
 
-namespace VideoGameCharacterApi.DomainModel;
+namespace DemoApp.DomainModel;
 
 public class Email : ValueObject
 {

@@ -1,4 +1,4 @@
-namespace VideoGameCharacterApi.Models;
+namespace DemoApp.Models;
 
 public class ToDo
 {

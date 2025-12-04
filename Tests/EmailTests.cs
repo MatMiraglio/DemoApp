@@ -1,5 +1,4 @@
-﻿using VideoGameCharacterApi.DomainModel;
-using VideoGameCharacterApi.Migrations;
+﻿using DemoApp.DomainModel;
 
 namespace Tests;
 

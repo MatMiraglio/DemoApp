@@ -1,8 +1,8 @@
-namespace VideoGameCharacterApi.Services;
+namespace DemoApp.DomainModel;
 
 public sealed class Error : ValueObject
 {
-    private const string Separator = "||";
+    public const string Separator = "||";
 
     public string Code { get; }
     public string Message { get; }
