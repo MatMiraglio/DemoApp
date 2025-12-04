@@ -29,7 +29,6 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddScoped<IVideoGameCharacterService, VideoGameCharacterService>();
 builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
