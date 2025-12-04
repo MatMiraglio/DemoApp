@@ -24,7 +24,7 @@ namespace VideoGameCharacterApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("VideoGameCharacterApi.Models.Character", b =>
+            modelBuilder.Entity("DemoApp.Models.Character", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

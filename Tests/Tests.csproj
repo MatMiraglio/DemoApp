@@ -19,7 +19,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\VideoGameCharacterApi\VideoGameCharacterApi.csproj" />
+      <ProjectReference Include="..\DemoApp\DemoApp.csproj" />
     </ItemGroup>
 
 </Project>

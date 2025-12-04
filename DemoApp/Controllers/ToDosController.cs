@@ -36,7 +36,6 @@ public class ToDosController : ControllerBase
             .SingleAsync();
         
         return Ok(user.todos);
-        return Ok("[{name : 'Felipe'}, { name : 'Matias'}]");
     }
     
     [HttpPost(Name = "PostToDo")]
@@ -49,8 +48,4 @@ public class ToDosController : ControllerBase
         
         return Ok();
     }
-
-    
-    
-    
 }

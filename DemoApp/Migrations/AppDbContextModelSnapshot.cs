@@ -21,7 +21,7 @@ namespace VideoGameCharacterApi.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("VideoGameCharacterApi.DomainModel.User", b =>
+            modelBuilder.Entity("DemoApp.DomainModel.User", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,7 +38,7 @@ namespace VideoGameCharacterApi.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("VideoGameCharacterApi.Models.Character", b =>
+            modelBuilder.Entity("DemoApp.Models.Character", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -63,7 +63,7 @@ namespace VideoGameCharacterApi.Migrations
                     b.ToTable("Characters");
                 });
 
-            modelBuilder.Entity("VideoGameCharacterApi.Models.ToDo", b =>
+            modelBuilder.Entity("DemoApp.Models.ToDo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -92,14 +92,14 @@ namespace VideoGameCharacterApi.Migrations
                     b.ToTable("ToDos");
                 });
 
-            modelBuilder.Entity("VideoGameCharacterApi.Models.ToDo", b =>
+            modelBuilder.Entity("DemoApp.Models.ToDo", b =>
                 {
-                    b.HasOne("VideoGameCharacterApi.DomainModel.User", null)
+                    b.HasOne("DemoApp.DomainModel.User", null)
                         .WithMany("Todos")
                         .HasForeignKey("UserId");
                 });
 
-            modelBuilder.Entity("VideoGameCharacterApi.DomainModel.User", b =>
+            modelBuilder.Entity("DemoApp.DomainModel.User", b =>
                 {
                     b.Navigation("Todos");
                 });
