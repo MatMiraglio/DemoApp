@@ -23,10 +23,8 @@ public sealed class EmailValidationAttribute : ValidationAttribute
         var userService = validationContext.GetService(typeof(UserService)) as UserService;
 
         var emailIsTaken = userService.EmailExists(email);
-
-        if (emailIsTaken) return new ValidationResult("Email is already taken");
         
-        
+        if (emailIsTaken) return new ValidationResult(Errors.EmailIsTaken.Serialize());
         
         return ValidationResult.Success;
     }
